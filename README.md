@@ -9,3 +9,5 @@ Use with TeknoParrot.
 
 * Original version for MKDX 1.10
 * Is missing QR unlockable karts
+
+![Screenshot of version 1.0](ScreenshotV1.png)
