@@ -38,17 +38,19 @@
             // tbName
             // 
             this.tbName.Location = new System.Drawing.Point(159, 6);
+            this.tbName.MaxLength = 32;
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(100, 20);
             this.tbName.TabIndex = 1;
             this.tbName.Text = "Unlocked";
+            this.tbName.TextChanged += new System.EventHandler(this.tbName_TextChanged);
             // 
             // lblInstructions
             // 
             this.lblInstructions.AutoSize = true;
             this.lblInstructions.Location = new System.Drawing.Point(12, 29);
             this.lblInstructions.Name = "lblInstructions";
-            this.lblInstructions.Size = new System.Drawing.Size(249, 117);
+            this.lblInstructions.Size = new System.Drawing.Size(255, 117);
             this.lblInstructions.TabIndex = 4;
             this.lblInstructions.Text = resources.GetString("lblInstructions.Text");
             // 
@@ -87,7 +89,8 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Gui";
-            this.Text = "MKDX Unlocked Profile v1.0";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "MKDX Unlocked Profile v2.0";
             this.Load += new System.EventHandler(this.Gui_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

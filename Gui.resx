@@ -119,7 +119,7 @@
   </resheader>
   <data name="lblInstructions.Text" xml:space="preserve">
     <value>Instructions:
-1. Make sure you have MKDX version 1.10.22
+1. Make sure you have MKDX version 1.10 or newer
 2. Go to game settings in TeknoParrot and change 
 server address to 127.0.0.1
 3. Keep this application open
