@@ -90,7 +90,7 @@
             this.MinimizeBox = false;
             this.Name = "Gui";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MKDX Unlocked Profile v2.0";
+            this.Text = "MKDX Unlocked Profile v2.1";
             this.Load += new System.EventHandler(this.Gui_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

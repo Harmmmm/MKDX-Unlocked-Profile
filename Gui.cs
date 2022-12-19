@@ -71,9 +71,21 @@ namespace MKDX_Unlocked_Profile
             _key = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\MKDX-Unlocked-Profile", true);
 
             if (_key != null)
-                tbName.Text = _key.GetValue("Name").ToString();
+            {
+                var name = _key.GetValue("Name");
+
+                if (name == null)
+                    _key.SetValue("Name", tbName.Text);
+                else
+                    tbName.Text = name.ToString();
+                    
+            }
             else
+            {
                 _key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\MKDX-Unlocked-Profile", true);
+                _key.SetValue("Name", tbName.Text);
+            }
+                
         }
 
         private void link_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -83,7 +95,7 @@ namespace MKDX_Unlocked_Profile
 
         private void tbName_TextChanged(object sender, EventArgs e)
         {
-            if (_key != null && tbName.Text != _key.GetValue("Name").ToString())
+            if (_key != null && tbName.Text != _key.GetValue("Name")?.ToString())
                 _key.SetValue("Name", tbName.Text);
         }
     }
